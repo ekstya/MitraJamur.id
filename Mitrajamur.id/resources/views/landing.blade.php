@@ -9,7 +9,7 @@
                     <h1 class="display-5 fw-bolder text-uppercase text-black mb-2">MitraJamur.id</h1>
                     <p class="lead fw-normal text-black-30 mb-5">Mitra Jamur Indonesia adalah sebuah Pusat pelatihan, penyediaan, dan pengolahan jamur terpadu yang terletak di Kecamatan Gebang, Kota Jember, Jawa Timur.</p>
                     <div class="d-grid gap-3 mt-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                        <a class="btn btn-success btn-lg px-4 me-sm-3" href="#features">Login</a>
+                        <a class="btn btn-success btn-lg px-4 me-sm-3" href="#login">Login</a>
                         <a class="btn btn-outline-dark btn-lg px-4" href="#!">Register <span class="bi bi-arrow-right"></span></a>
                     </div>
                 </div>
