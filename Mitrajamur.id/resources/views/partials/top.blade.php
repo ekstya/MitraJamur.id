@@ -8,10 +8,7 @@
         <div class="nav-r gx-6" id="navbarNav">
         <ul class="nav justify-content-end nav-pills nav-justified">
             <li class=" nav-item gx-6">
-                <a class="nav-link active rounded" href="#product" style="background-color: #519259; font-size:20px;">Product</a>
-            </li>
-            <li class=" nav-item ">
-                <a class="nav-link active rounded " href="#workshop" style="background-color: #519259; font-size:20px;">Workshop</a>
+                <a class="nav-link active rounded" href="/" style="background-color: #519259; font-size:20px;">Home</a>
             </li>
         </ul>
         
