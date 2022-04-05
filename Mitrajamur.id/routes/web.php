@@ -32,3 +32,11 @@ Route::get('admin', function () {
 Route::get('customer', function () {
     return view('customer/home');
 });
+
+Route::get('product', function () {
+    return view('admin/product');
+});
+
+Route::get('workshop', function () {
+    return view('admin/workshop');
+});
