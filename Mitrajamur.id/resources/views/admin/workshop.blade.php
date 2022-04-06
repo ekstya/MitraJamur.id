@@ -17,13 +17,13 @@
                     <div class="card h-100">
                         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Fresh Item</div>
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="jamur segar" />
-                        <div class="card-body p-4">
+                        <div class="card-body p-4" style="background-color: #A3DA8D;">
                             <div class="text-center">
-                                <h5 class="fw-bolder">Jamur Tiram Segar</h5>
+                                <h5 class="fw-bolder">nama workshop</h5>
                                 Rp19.000
                             </div>
                         </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="card-footer p-4 pt-0 border-top-0" style="background-color: #A3DA8D;">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/editWorkshop">Edit</a></div>
                         </div>
                     </div>
@@ -32,13 +32,13 @@
                 <div class="col mb-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="kaldu jamur" />
-                        <div class="card-body p-4">
+                        <div class="card-body p-4" style="background-color: #A3DA8D;">
                             <div class="text-center">                              
-                                <h5 class="fw-bolder">Kaldu Jamur</h5>                               
+                                <h5 class="fw-bolder">Nama workshop</h5>                               
                                 Rp20.000
                             </div>
                         </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="card-footer p-4 pt-0 border-top-0" style="background-color: #A3DA8D;">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Edit</a></div>
                         </div>
                     </div>
@@ -48,13 +48,13 @@
                     <div class="card h-100">
                         <!-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Fresh Item</div> -->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="sosis jamur" />
-                        <div class="card-body p-4">
+                        <div class="card-body p-4" style="background-color: #A3DA8D;">
                             <div class="text-center">
-                                <h5 class="fw-bolder">Sosis Jamur</h5>
+                                <h5 class="fw-bolder">nama workshop</h5>
                                 Rp25.000
                             </div>
                         </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="card-footer p-4 pt-0 border-top-0" style="background-color: #A3DA8D;">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Edit</a></div>
                         </div>
                     </div>
@@ -64,13 +64,13 @@
                     <div class="card h-100">
                         <!-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Fresh Item</div> -->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="kebab jamur" />
-                            <div class="card-body p-4">
+                            <div class="card-body p-4" style="background-color: #A3DA8D;">
                             <div class="text-center">
-                                <h5 class="fw-bolder">Kebab Jamur</h5>
+                                <h5 class="fw-bolder">nama workshop</h5>
                                 Rp30.000
                             </div>
                         </div>
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="card-footer p-4 pt-0 border-top-0" style="background-color: #A3DA8D;">
                         <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Edit</a></div>
                     </div>    
                 </div>
