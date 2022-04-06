@@ -2,7 +2,7 @@
 
 @section('container-fluid')
 <header class="py-4" style="background-color: #91C788;">
-    <div class="container px-3">
+    <div class="container px-4">
         <div class="row gx-5 align-items-center justify-content-center">
             <div class="col-lg-8 col-xl-7 col-xxl-6">
                 <div class="my-5 text-center text-xl-start">

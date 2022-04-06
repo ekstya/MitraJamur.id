@@ -40,3 +40,19 @@ Route::get('product', function () {
 Route::get('workshop', function () {
     return view('admin/workshop');
 });
+
+Route::get('addProduct', function () {
+    return view('admin/addProduct');
+});
+
+Route::get('addWorkshop', function () {
+    return view('admin/addWorkshop');
+});
+
+Route::get('editWorkshop', function () {
+    return view('admin/editWorkshop');
+});
+
+Route::get('editProduct', function () {
+    return view('admin/editProduct');
+});

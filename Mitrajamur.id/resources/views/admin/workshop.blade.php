@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row gx-5">
         <div class="col-2">
-            <button type="button" class=" btn btn-success btn-md mt-2 mb-5" style="border-radius: 1rem;" ><i class="bi bi-plus" aria-hidden="true"></i><b>  Tambah</b></button>
+            <a href="/addWorkshop" class=" btn btn-success btn-md mt-2 mb-5" role="button" style="border-radius: 1rem;" ><i class="bi bi-plus" aria-hidden="true"></i><b>  Tambah</b></a>
         </div>
         <div class="col-2">
             <button type="button" class="btn btn-success btn-md mt-2 mb-5 justify-content-end btn-pills btn-justified" style="border-radius: 1rem;" ><i class="bi bi-person-lines-fill" aria-hidden="true"></i><b>  Participant</b></button>
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Edit</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/editWorkshop">Edit</a></div>
                         </div>
                     </div>
                 </div>
