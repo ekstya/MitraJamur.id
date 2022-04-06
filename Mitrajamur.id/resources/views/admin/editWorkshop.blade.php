@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="container" style="margin: 20px;">
+<div class="container" style="margin: auto;">
         <div class="card mt-2 mb-5">
             <div class="form-header p-3 bg-success text-black text-center"><span class="bi bi-plus" style ="font-size: 1.3rem; color:rgb(255, 255, 255);" name="edit"> Ubah Data Workshop</span></div> 
 
@@ -31,7 +31,7 @@
                     <div class="form-group row mt-1 p-3">
                         <label class="col-form-label col-sm-2 text-left">Waktu *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control datepicker" placeholder="Input Waktu Pelaksanaan" required>
+                            <input type="date" class="form-control datepicker" placeholder="Input Waktu Pelaksanaan" required>
                         </div>
                     </div>
 

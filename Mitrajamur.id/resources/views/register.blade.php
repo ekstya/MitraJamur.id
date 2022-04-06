@@ -26,7 +26,30 @@
               </div>
 
               <div class="form-outline mb-4">
-                <textarea type="text" id="typeAdress" class="form-control form-control-lg" placeholder="Address" rows="2" required></textarea>
+                <select class="form-select form-select-lg" id="inputGroupSelect01" placeholder="Kecamatan" required>
+                <option selected>Pilih Kecamatan</option>
+                  <option value="1">Sumbersari</option>
+                  <option value="2">Tulangan</option>
+                  <option value="3">Balung</option>
+                </select>
+              </div>
+
+              <div class="form-outline mb-4">
+                <select class="form-select form-select-lg" id="inputGroupSelect01" placeholder="Kabupaten" required>
+                <option selected>Pilih Kabupaten</option>
+                  <option value="1">Jember</option>
+                  <option value="2">Sidoarjo</option>
+                  <option value="3">Malang</option>
+                </select>
+              </div>
+
+              <div class="form-outline mb-4">
+                <select class="form-select form-select-lg" id="inputGroupSelect01" placeholder="Provinsi" required>
+                <option selected>Pilih Provinsi</option>
+                  <option value="1">Jawa Timur</option>
+                  <option value="2">Jawa Tengah</option>
+                  <option value="3">Bali</option>
+                </select>
               </div>
 
               <div class="form-outline mb-4 mt-2">

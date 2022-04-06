@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="container" style="margin: 20px;">
+<div class="container" style="margin: auto;">
         <div class="card mt-2 mb-5">
             <div class="form-header p-3 bg-success text-black text-center"><span class="bi bi-plus" style ="font-size: 1.3rem; color:rgb(255, 255, 255);" name="edit"> Ubah Data Produk</span></div> 
 

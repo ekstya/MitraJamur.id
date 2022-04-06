@@ -59,42 +59,12 @@
  	 		        <a href="/admin">
                       <i class="bi bi-calendar3" aria-hidden="true"></i>  Jadwal Panen</a>
  	 	        </li>
-            <!-- <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse"aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="/product">Product</a>
-                    </li>
-                    <li>
-                        <a href="/workshop">Workshop</a>
-                    </li>
+            <hr class="soft my-1 bg-white">
+                <li>
+                    <a class="nav-link px-3 fixed-bottom mb-3" href="/">
+                        <i class="bi bi-box-arrow-right" aria-hidden="true"></i>  Log Out
+                    </a>
+ 	 	        </li>
 
-                </ul>
-            </li> -->
-        <!-- <li>
- 	 		<a href="#">Laporan</a>
- 	 	</li>
- 	 	<li>
- 	 		<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
- 	 		<ul class="collapse list-unstyled" id="pageSubmenu">
- 	 			<li>
- 	 				<a href="#">Page 1</a>
- 	 			</li>
- 	 			<li>
- 	 				<a href="#">Page 2</a>
- 	 			</li>
- 	 		</ul>
- 	 	</li>
-
- 	 	 	 	<li>
- 	 				<a href="#">Profile</a>
- 	 			</li> -->
-        <hr class="soft my-1 bg-white">
-        <li>
-            <a class="nav-link px-3 fixed-bottom mb-3" href="/">
-                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>  Log Out
-            </a>
- 	 	</li>
-
- 	 </ul>
-</nav>
+ 	    </ul>
+    </nav>

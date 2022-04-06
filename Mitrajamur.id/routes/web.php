@@ -56,3 +56,7 @@ Route::get('editWorkshop', function () {
 Route::get('editProduct', function () {
     return view('admin/editProduct');
 });
+
+Route::get('participant', function () {
+    return view('admin/participant');
+});

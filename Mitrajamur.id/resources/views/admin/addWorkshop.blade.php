@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="container" style="margin: 20px;">
+<div class="container" style="margin: auto;">
         <div class="card mt-2 mb-5">
             <div class="form-header p-3 bg-success text-black text-center"><span class="bi bi-plus" style ="font-size: 1.3rem; color:rgb(255, 255, 255);" name="edit"> Tambah Data Workshop</span></div> 
 
@@ -31,7 +31,7 @@
                     <div class="form-group row mt-1 p-3">
                         <label class="col-form-label col-sm-2 text-left">Waktu *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control datepicker" placeholder="Input Waktu Pelaksanaan" required>
+                            <input type="date" class="form-control" placeholder="Input Waktu Pelaksanaan" required>
                         </div>
                     </div>
 
@@ -63,26 +63,4 @@
                 </form>
             </div>
         </div>
-    <!-- <script type="text/javascript">
-        $(function(){
-        $(".datepicker").datepicker({
-            format: 'yyyy-mm-dd',
-            autoclose: true,
-            todayHighlight: true,
-        });
-        });
-    </script> -->
-<!-- <script>
-    $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //our date input has the name "date"
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    })
-</script>  -->
 </div>
