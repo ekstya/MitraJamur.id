@@ -47,7 +47,7 @@
                     <div class="form-group row mt-1 p-3">
                         <label class="col-form-label col-sm-2 text-left">Deskripsi</label>
                         <div class="col-sm-10">
-                            <textarea type="text" class="form-control" placeholder="Input Movie Description" row="3"></textarea>
+                            <textarea type="text" class="form-control" placeholder="Input Description" row="3"></textarea>
                         </div>
                     </div>
 
