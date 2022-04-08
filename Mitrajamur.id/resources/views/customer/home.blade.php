@@ -6,11 +6,11 @@
         <div class="row gx-5 align-items-center justify-content-center">
             <div class="col-lg-8 col-xl-7 col-xxl-6">
                 <div class="my-5 text-center text-xl-start">
-                    <h1 class="display-5 fw-bolder text-uppercase text-black mb-2">MitraJamur.id</h1>
+                    <h1 class="display-6 fw-bolder text-uppercase text-black mb-2">MitraJamur.id</h1>
                     <p class="lead fw-normal text-black-30 mb-3">Mitra Jamur Indonesia adalah sebuah Pusat pelatihan, penyediaan, dan pengolahan jamur terpadu yang terletak di Kecamatan Gebang, Kota Jember, Jawa Timur.</p>
                 </div>
             </div>
-            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5 justify-content-end" src="img/jamoer.png" alt="logo" /></div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-2 justify-content-end" src="img/jamoer.png" alt="logo" /></div>
         </div>
     </div>
 </header>
@@ -23,7 +23,7 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
                 <div class="col mb-5">
-                    <div class="card mb-3" >
+                    <div class="card h-100 mb-3" >
                     <a class="card-body rounded btn btn-outline-success" type="button" style="background-color:#91C788;" href="/viewProduct">
                         <h4 class="card-title text-center text-black mt-5 mb-5" style="font-family:' Verdana';"><b>PRODUCT</b></h4>
                     </a>
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="col mb-5">
-                    <div class="card mb-3" >
+                    <div class="card h-100 mb-3" >
                     <a class="card-body rounded btn btn-outline-success" type="button" style="background-color:#91C788;" href="/viewWorkshop">
                         <h4 class="card-title text-center text-black mt-5 mb-5" style="font-family:' Verdana';"><b>WORKSHOP</b></h4>
                     </a>
