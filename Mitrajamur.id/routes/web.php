@@ -60,3 +60,11 @@ Route::get('editProduct', function () {
 Route::get('participant', function () {
     return view('admin/participant');
 });
+
+Route::get('viewProduct', function () {
+    return view('customer/product');
+});
+
+Route::get('viewWorkshop', function () {
+    return view('customer/workshop');
+});

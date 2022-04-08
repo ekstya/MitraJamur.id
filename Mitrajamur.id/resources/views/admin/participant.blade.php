@@ -20,6 +20,7 @@
             <th scope="col">Nama Lengkap</th>
             <th scope="col">Email</th>
             <th scope="col">No.Hp</th>
+            <th scope="col">Status Pembayaran</th>
             </tr>
         </thead>
         <tbody>
@@ -28,18 +29,42 @@
             <td>Mark</td>
             <td>2020@jamor.id</td>
             <td>081118765021</td>
+            <td><div class="input-group mb-1">
+                <select class="form-select form-select-lg" id="inputGroupSelect01">
+                <option selected>Choose</option>
+                <option value="1">Belum Dibayar</option>
+                <option value="2">Belum Tervalidasi</option>
+                <option value="3">Telah Tervalidasi</option>
+                </select>
+            </div></td>
             </tr>
             <tr>
             <th scope="row">2</th>
             <td>Jacob</td>
             <td>2021@jamor.id</td>
-            <td>087198345692</td>
+            <td>081118765021</td>
+            <td><div class="input-group mb-1">
+                <select class="form-select form-select-lg" id="inputGroupSelect01">
+                <option selected>Choose</option>
+                <option value="1">Belum Dibayar</option>
+                <option value="2">Belum Tervalidasi</option>
+                <option value="3">Telah Tervalidasi</option>
+                </select>
+            </div></td>
             </tr>
             <tr>
             <th scope="row">3</th>
             <td>Larry</td>
             <td>2022@jamor.id</td>
-            <td>084294710472</td>
+            <td>081118765021</td>
+            <td><div class="input-group mb-1">
+                <select class="form-select form-select-lg" id="inputGroupSelect01">
+                <option selected>Choose</option>
+                <option value="1">Belum Dibayar</option>
+                <option value="2">Belum Tervalidasi</option>
+                <option value="3">Telah Tervalidasi</option>
+                </select>
+            </div></td>
             </tr>
         </tbody>
     </table>

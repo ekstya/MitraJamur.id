@@ -20,8 +20,8 @@
 </header>
 
 <section class="page-section product mt-5" id="product">
-    <div class="container-fluid px-4 pg-lg-5">
-        <h3 class="page-section-heading text-center text-uppercase mt-5 mb-3"><b>PRODUCT</b></h3>
+    <div class="container px-4 pg-lg-5">
+        <h2 class="page-section-heading text-center text-uppercase mt-5 mb-3"><b>PRODUCT</b></h2>
         <h5 class="text-center mb-5">What We Sell</h5>
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -102,7 +102,7 @@
 
 <section class="page-section Workshop" id="workshop">
     <div class="container-fluid px-4 pg-lg-5 mt-3">
-    <h3 class="page-section-heading text-center text-uppercase mt-2 mb-3"><b>WORKSHOP</b></h3>
+    <h2 class="page-section-heading text-center text-uppercase mt-2 mb-3"><b>WORKSHOP</b></h2>
     <h5 class="text-center mb-5">More Knowledge for You</h5>
         <div class="divider-custom">
             <div class="divider-custom-line"></div>

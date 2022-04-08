@@ -24,7 +24,7 @@
                     <div class="form-group row mt-1 p-3">
                         <label class="col-form-label col-sm-2 text-left">Nama Workshop *</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Input Nama Produk" required>
+                            <input type="text" class="form-control" placeholder="Input Nama Workshop" required>
                         </div>
                     </div>
 

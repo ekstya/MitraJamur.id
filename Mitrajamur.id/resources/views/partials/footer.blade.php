@@ -23,7 +23,7 @@
 
   </div>
 
-  <div class="text-center p-3" style="background-color: #519259;">
+  <div class="text-center" style="background-color: #519259;">
     © 2022 Copyright:
     <a class="text-white">MitraJamur.id</a>
   </div>
