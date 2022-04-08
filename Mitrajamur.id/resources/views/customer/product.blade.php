@@ -21,7 +21,7 @@
                             <h6 class="col mb-3 mt-2 text-center">Rp.....</h6>
                         </div>
                         <div class="row">
-                        <a class="btn btn-outline-success btn-sm" href="#" type="button">Detail Produk</a>
+                        <a class="btn btn-outline-success btn-sm" href="detailProduct" type="button">Detail Produk</a>
                         </div>
                     </div>
                 </div>

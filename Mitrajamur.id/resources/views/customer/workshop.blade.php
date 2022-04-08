@@ -9,6 +9,7 @@
     <div class="text-row">
         <h2 class="title text-center"><b>WORKSHOP</b></h2>
     </div>
+    
     <div class="container-xl">
         <div class="row row-cols-3 g-4 row-cols-md-5 mt-4 mb-4">
             <div class="col">
@@ -20,7 +21,7 @@
                             <h6 class="col mb-3 mt-2 text-center">Rp.....</h6>
                         </div>
                         <div class="row">
-                        <a class="btn btn-outline-success btn-sm" href="#" type="button">Detail Workshop</a>
+                        <a class="btn btn-outline-success btn-sm" href="detailWorkshop" type="button">Detail Workshop</a>
                         </div>
                     </div>
                 </div>

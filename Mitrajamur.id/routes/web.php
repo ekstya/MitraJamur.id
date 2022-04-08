@@ -68,3 +68,15 @@ Route::get('viewProduct', function () {
 Route::get('viewWorkshop', function () {
     return view('customer/workshop');
 });
+
+Route::get('detailProduct', function () {
+    return view('customer/detailProduct');
+});
+
+Route::get('detailWorkshop', function () {
+    return view('customer/detailWorkshop');
+});
+
+Route::get('daftarWorkshop', function () {
+    return view('customer/pendaftaran');
+});
