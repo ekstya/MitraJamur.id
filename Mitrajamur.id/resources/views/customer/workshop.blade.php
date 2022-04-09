@@ -5,6 +5,8 @@
 <div class="container-fluid">
     <div class="button-row" >
         <a href="/customer" class="btn btn-outline-success btn-md mt-3 mb-4"  role="button" style="border-radius: 1rem;" ><i class="bi bi-arrow-left-circle-fill" aria-hidden="true"></i><b>  Back</b></a>
+        <a href="/workshopTerdaftar" class="btn btn-success btn-md mt-3 mb-4"  role="button" style="border-radius: 1rem; float:right" ><b>Workshop Terdaftar</b></a>
+
     </div>
     <div class="text-row">
         <h2 class="title text-center"><b>WORKSHOP</b></h2>

@@ -80,3 +80,7 @@ Route::get('detailWorkshop', function () {
 Route::get('daftarWorkshop', function () {
     return view('customer/pendaftaran');
 });
+
+Route::get('workshopTerdaftar', function () {
+    return view('customer/workshopTerdaftar');
+});
