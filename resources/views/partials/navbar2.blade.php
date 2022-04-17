@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top " style="background-color: #519259;">
     <div class="container-fluid" style="margin-left: 20px; margin-right: 10px;">
-        <a class="navbar-brand" href="/customer" style="font-size:1.7rem;">MitraJamur.id</a>
+        <a class="navbar-brand" href="{{ route('Customer') }}" style="font-size:1.7rem;">MitraJamur.id</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
