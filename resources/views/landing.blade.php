@@ -46,7 +46,6 @@ function Rupiah($Angka) {
                 @foreach ($Produk as $dt)    
                 <div class="col mb-5">
                     <div class="card h-100">
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Fresh Item</div>
                         <div class="overflow-hidden"
                             style="height: 15rem; background: url('{{ asset('img/produk/'.$dt->gambar_produk) }}'); background-size: cover; background-position: center;">
                         </div>

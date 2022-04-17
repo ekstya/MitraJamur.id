@@ -37,7 +37,7 @@ function Rupiah($Angka) {
                             <h6 class="col mb-3 mt-2 text-center">{{ Rupiah($dt->harga_workshop) }}</h6>
                         </div>
                         <div class="row">
-                        <a class="btn btn-outline-success btn-sm" href="{{ url('Customer/DetailWorkshop/'.$dt->id_workshop) }}" type="button">Detail Produk</a>
+                        <a class="btn btn-outline-success btn-sm" href="{{ url('Customer/DetailWorkshop/'.$dt->id_workshop) }}" type="button">Detail Workshop</a>
                         </div>
                     </div>
                 </div>

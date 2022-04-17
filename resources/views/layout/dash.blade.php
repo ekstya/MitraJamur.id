@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/style.css') !!}">
     <title>MitraJamur.id | Admin</title>
 </head>
-<body>
+<body style="background-color: #D3E4CD; font-family:BR Hendrix Semi Bold;">
     <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top " style="background-color: #519259;">
         <div class="container-fluid" style="margin-left: 20px; margin-right: 10px;">
             <a class="navbar-brand" href="{{ route('Admin') }}" style="font-size:1.7rem;">MitraJamur.id</a>

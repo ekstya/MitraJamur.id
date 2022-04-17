@@ -4,6 +4,5 @@
     <div class="container-fluid">
         @yield('container-fluid')
     </div>
-    @include('partials.footer')
 </body>
 </html>

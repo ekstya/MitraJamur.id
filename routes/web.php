@@ -33,6 +33,7 @@ Route::middleware(['LoginAdmin'])->prefix('Admin')->group(function() {
     Route::get('/Workshop', [MasterController::class, 'Workshop'])->name('Workshop');
     Route::post('/TambahWorkshop', [MasterController::class, 'TambahWorkshop'])->name('TambahWorkshop');
     Route::post('/EditWorkshop', [MasterController::class, 'EditWorkshop'])->name('EditWorkshop');
+    Route::post('/Participant', [MasterController::class, 'Participant'])->name('Participant');
     Route::post('/HapusWorkshop', [MasterController::class, 'HapusWorkshop'])->name('HapusWorkshop');
 });
 

@@ -1,14 +1,6 @@
 @include('layout.dash')
 <div class="main-page" id="content" style="margin:20px;">
     <div class="container-fluid">
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  	<div class="container-fluid">
-  		<button type="button" id="sidebarCollapse" class="btn  btn-success">
-  			<i class="bi bi-arrow-right"></i>
-  			<span>=></span> -->
-        <!-- </button>
-  	</div>
-  	  </nav> -->
         <div class="row g-3 mb-3">
             <div class="col-12 col-sm-6 col-md-6 col-lg-4">
                 <div class="card p-2 shadow">
@@ -53,6 +45,39 @@
                 </div>
             </div>
         </div>
+        <section class="page-section item mt-5 mb-5" id="item">
+        <div class="container">
+          <h2 class="text-center mb-5"><b><u>Hot Items</u></b></h2>
+          <div class="row justify-content-center" style="margin: 20px;">
+            <div class="row gx-2 gx-lg-2 row-cols-2 row-cols-md-2 row-cols-xl-2 justify-content-center">
+
+                <div class="col mb-6">
+                    <div class="card h-100">
+                        <div class="badge badge-primary text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BEST SELLER</div>
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="jamur segar" />
+                        <div class="card-body p-4" style="background-color: #A3DA8D;">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">NamaProduk</h5>
+                                Rphargaa
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-6">
+                    <div class="card h-100">
+                      <div class="badge badge-primary text-black position-absolute" style="top: 0.5rem; right: 0.5rem;">HOT TOPIC</div>
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="kaldu jamur" />
+                        <div class="card-body p-4" style="background-color: #A3DA8D;">
+                            <div class="text-center">                              
+                                <h5 class="fw-bolder">Nama Workshop</h5>                               
+                                Rphargaa
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </section> 
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

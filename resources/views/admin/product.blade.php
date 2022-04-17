@@ -41,6 +41,10 @@ function Rupiah($Angka) {
                                     placeholder="Harga Produk" required>
                             </div>
                             <div class="form-group">
+                                <input type="number" class="form-control" id="stok" name="stok"
+                                    placeholder="Stok Produk" required>
+                            </div>
+                            <div class="form-group">
                                 <textarea class="form-control" name="deskripsi" id="deskripsi" rows="2"
                                     placeholder="Deskripsi Produk"></textarea>
                             </div>
@@ -58,22 +62,19 @@ function Rupiah($Angka) {
                 @foreach ($Produk as $dt)
                 <div class="col-6 col-lg-4 col-xl-3 mb-4">
                     <div class="card rounded">
-                        {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Fresh
-                            Item</div> --}}
                         <div class="overflow-hidden"
                             style="height: 10rem; background: url('{{ asset('img/produk/'.$dt->gambar_produk) }}'); background-size: cover; background-position: center;">
                         </div>
                         <div class="card-body" style="height: 8rem;">
                             <div class="text-center">
-                                <h5 class="fw-bolder">{{ $dt->nama_produk }}</h5>
+                                <h5 class="fw-bolder"><b>{{ $dt->nama_produk }}</b></h5>
                                 {{ Rupiah($dt->harga_produk) }}
+                                <h6 class="text mt-2">Stok : {{ $dt->stok_produk }} </h6>
                             </div>
                         </div>
                         <div class="card-footer border-top-0 bg-transparent text-center">
-                            <button type="button" class="btn btn-outline-dark mt-auto" data-toggle="modal"
+                            <button type="button" class="btn btn-outline-success mt-1" data-toggle="modal"
                                 data-target="#editProduk{{ $dt->id_produk }}">Edit</button>
-                            <button type="button" class="btn btn-outline-danger mt-auto" data-toggle="modal"
-                                data-target="#hapusProduk{{ $dt->id_produk }}">Hapus</button>
                         </div>
                     </div>
                 </div>
@@ -90,12 +91,19 @@ function Rupiah($Angka) {
                                 <div class="modal-body">
                                     <input type="text" id="id" name="id" value="{{ $dt->id_produk }}" style="display: none;">
                                     <div class="form-group">
+                                        <input type="file" class="form-control" id="file" name="file" accept="image/gif,image/jpeg,image/jpg,image/png," required>
+                                    </div>
+                                    <div class="form-group">
                                         <input type="text" class="form-control" id="nama" name="nama"
                                             placeholder="Nama Produk" value="{{ $dt->nama_produk }}" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="number" class="form-control" id="harga" name="harga"
                                             placeholder="Harga Produk" value="{{ $dt->harga_produk }}" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="stok" name="stok"
+                                            placeholder="Stok Produk" value="{{ $dt->stok_produk }}" required>
                                     </div>
                                     <div class="form-group">
                                         <textarea class="form-control" name="deskripsi" id="deskripsi" rows="2"

@@ -21,17 +21,17 @@ function Rupiah($Angka) {
 
 <div class="container-xl">
     <div class="row row-cols-2 g-4 row-cols-md-2 mt-4 mb-4">
-        <div class="image">
+        <div class="image" style="padding-right: 30px;">
             <img src="{{ asset('img/produk/'.$Produk->gambar_produk) }}" alt="" width="100%">
         </div>
-        <div class="main-detail">
+        <div class="main-detail" style="padding-left: 30px;">
             <h2 class="text-center"><b>{{ $Produk->nama_produk }}</b></h2>
             <hr class="soft my-3 bg-black">
             <h3 class="text-center mt-4">{{ Rupiah($Produk->harga_produk) }}</h3>
             <h5 class="text-justify mt-5"><b>Deskripsi Produk : </b></h5>
             <p>{{ $Produk->deskripsi_produk }}</p>
             <div class="button-row" >
-                <a href="#" class="btn btn-success btn-md mt-4 mb-4"  role="button" style="border-radius: 1rem;" ><i class="bi bi-cart-dash-fill" aria-hidden="true"></i><b>  Beli Sekarang</b></a>
+                <a href="#" class="btn btn-success btn-md mt-5 mb-4"  role="button" style="border-radius: 1rem;" ><i class="bi bi-cart-dash-fill" aria-hidden="true"></i><b>  Beli Sekarang</b></a>
             </div>
         </div>
     </div>

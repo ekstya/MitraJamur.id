@@ -104,14 +104,19 @@ class MasterController extends Controller
             'gambar_produk' => $NamaFile,
             'nama_produk' => $req->nama,
             'harga_produk' => $req->harga,
+            'stok_produk' => $req->stok,
             'deskripsi_produk' => $req->deskripsi
         ]);
         return back();
     }
     public function EditProduk(Request $req) {
+        $NamaFile = time().'.'.$req->file->getClientOriginalExtension();
+        $req->file->move('../public/img/produk', $NamaFile);
         DB::table('produk')->where('id_produk', $req->id)->update([
+            'gambar_produk' => $NamaFile,
             'nama_produk' => $req->nama,
             'harga_produk' => $req->harga,
+            'stok_produk' => $req->stok,
             'deskripsi_produk' => $req->deskripsi
         ]);
         return back();
@@ -126,6 +131,12 @@ class MasterController extends Controller
         $Workshop = DB::table('workshop')->get();
         return view('admin/workshop', compact('Workshop'));
     }
+
+    // public function Participant() {
+    //     $Participant = DB::table('participant')->get();
+    //     return view('admin/participant', compact('Participant'));
+    // }
+
     public function TambahWorkshop(Request $req) {
         $NamaFile = time().'.'.$req->file->getClientOriginalExtension();
         $req->file->move('../public/img/workshop', $NamaFile);
@@ -141,7 +152,10 @@ class MasterController extends Controller
     }
     public function EditWorkshop(Request $req) {
         $Waktu = explode('-', $req->waktu);
+        $NamaFile = time().'.'.$req->file->getClientOriginalExtension();
+        $req->file->move('../public/img/workshop', $NamaFile);
         DB::table('workshop')->where('id_workshop', $req->id)->update([
+            'gambar_workshop' => $NamaFile,
             'nama_workshop' => $req->nama,
             'waktu_workshop' => mktime(12, 0, 0, $Waktu[1], $Waktu[2], $Waktu[0]),
             'harga_workshop' => $req->harga,
@@ -155,6 +169,14 @@ class MasterController extends Controller
         DB::table('workshop')->where('id_workshop', $req->id)->delete();
         return back();
     }
+
+    public function Participant(Request $req) {
+        $Data = DB::table('workshop')->where('id_workshop', $req->id)->first();
+        unlink('img/workshop/'.$Data->gambar_workshop);
+        DB::table('workshop')->where('id_workshop', $req->id)->delete();
+        return back();
+    }
+
     public function Customer() {
         return view('customer/home');
     }

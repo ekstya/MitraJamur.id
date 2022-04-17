@@ -62,23 +62,22 @@ function Rupiah($Angka) {
                 @foreach ($Workshop as $dt)
                 <div class="col-6 col-lg-4 col-xl-3 mb-4">
                     <div class="card rounded">
-                        {{-- <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Fresh
-                            Item</div> --}}
                         <div class="overflow-hidden"
                             style="height: 10rem; background: url('{{ asset('img/workshop/'.$dt->gambar_workshop) }}'); background-size: cover; background-position: center;">
                         </div>
                         <div class="card-body" style="height: 8rem;">
                             <div class="text-center">
-                                <h5 class="fw-bolder">{{ $dt->nama_workshop }}</h5>
+                                <h5 class="fw-bolder"><b>{{ $dt->nama_workshop }}</b></h5>
                                 {{ date('d M Y', $dt->waktu_workshop) }}<br>
                                 {{ Rupiah($dt->harga_workshop) }}
                             </div>
                         </div>
-                        <div class="card-footer border-top-0 bg-transparent text-center">
-                            <button type="button" class="btn btn-outline-dark mt-auto" data-toggle="modal"
+                        <div class="card-footer border-top-0 bg-transparent text-center mt-1">
+                            <button type="button" class="btn btn-outline-success mt-auto" data-toggle="modal"
                                 data-target="#editWorkshop{{ $dt->id_workshop }}">Edit</button>
-                            <button type="button" class="btn btn-outline-danger mt-auto" data-toggle="modal"
-                                data-target="#hapusWorkshop{{ $dt->id_workshop }}">Hapus</button>
+                            <button type="button" class="btn btn-outline-success" href="/Participant">Participant</a>
+                            <!-- <button type="button" class="btn btn-outline-danger mt-auto" data-toggle="modal"
+                                data-target="#hapusWorkshop{{ $dt->id_workshop }}">Hapus</button> -->
                         </div>
                     </div>
                 </div>
@@ -94,6 +93,9 @@ function Rupiah($Angka) {
                                 </div>
                                 <div class="modal-body">
                                     <input type="text" id="id" name="id" value="{{ $dt->id_workshop }}" style="display: none;">
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="file" name="file" accept="image/gif,image/jpeg,image/jpg,image/png," value="{{ $dt->gambar_workshop }}" required>
+                                    </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="nama" name="nama"
                                             placeholder="Nama Workshop" value="{{ $dt->nama_workshop }}" required>
