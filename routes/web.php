@@ -38,9 +38,10 @@ Route::middleware(['LoginAdmin'])->prefix('Admin')->group(function() {
 });
 
 Route::middleware(['LoginCustomer'])->prefix('Customer')->group(function() { 
-    Route::get('/Home', [MasterController::class, 'Customer'])->name('Customer');
+    Route::get('/Customer', [MasterController::class, 'Customer'])->name('Customer');
     Route::get('/ViewProduct', [MasterController::class, 'ViewProduct'])->name('ViewProduct');
     Route::get('/DetailProduct/{id}', [MasterController::class, 'DetailProduct'])->name('DetailProduct');
     Route::get('/ViewWorkshop', [MasterController::class, 'ViewWorkshop'])->name('ViewWorkshop');
     Route::get('/DetailWorkshop/{id}', [MasterController::class, 'DetailWorkshop'])->name('DetailWorkshop');
+    Route::get('/Pendaftaran/{id}', [MasterController::class, 'Pendaftaran'])->name('Pendaftaran');
 });
