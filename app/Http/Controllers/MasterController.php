@@ -53,6 +53,7 @@ class MasterController extends Controller
     public function Login() {
         return view('login');
     }
+
     public function AuthLogin(Request $req) {
         $Data = DB::table('user')->where('username', $req->username);
         Session::flash('vUsername', $req->username);
@@ -132,10 +133,10 @@ class MasterController extends Controller
         return view('admin/workshop', compact('Workshop'));
     }
 
-    // public function Participant() {
-    //     $Participant = DB::table('participant')->get();
-    //     return view('admin/participant', compact('Participant'));
-    // }
+    public function Participant() {
+        $Participant = DB::table('participant')->get();
+        return view('admin/participant', compact('Participant'));
+    }
 
     public function TambahWorkshop(Request $req) {
         $NamaFile = time().'.'.$req->file->getClientOriginalExtension();
@@ -170,16 +171,17 @@ class MasterController extends Controller
         return back();
     }
 
-    public function Participant(Request $req) {
-        $Data = DB::table('workshop')->where('id_workshop', $req->id)->first();
-        unlink('img/workshop/'.$Data->gambar_workshop);
-        DB::table('workshop')->where('id_workshop', $req->id)->delete();
-        return back();
-    }
+    // public function Participant(Request $req) {
+    //     $Data = DB::table('workshop')->where('id_workshop', $req->id)->first();
+    //     unlink('img/workshop/'.$Data->gambar_workshop);
+    //     DB::table('workshop')->where('id_workshop', $req->id)->delete();
+    //     return back();
+    // }
 
     public function Customer() {
         return view('customer/home');
     }
+
     public function ViewProduct() {
         $Produk = DB::table('produk')->get();
         return view('customer/product', compact('Produk'));
@@ -195,5 +197,10 @@ class MasterController extends Controller
     public function DetailWorkshop($id) {
         $Workshop = DB::table('workshop')->where('id_workshop', $id)->first();
         return view('customer/detailWorkshop', compact('Workshop'));
+    }
+
+    public function Pendaftaran($id) {
+        $Workshop = DB::table('workshop')->where('id_workshop', $id)->first();
+        return view('customer/pendaftaran', compact('Workshop'));
     }
 }
