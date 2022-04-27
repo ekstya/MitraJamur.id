@@ -1,103 +1,122 @@
-@include('layout.dash')
-<div class="main-page" id="content" style="margin:20px;">
-    <div class="container-fluid">
-        <div class="row g-3 mb-3">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="card p-2 shadow">
-                    <div class="d-flex align-items-center px-2">
-                        <i class="bi bi-wallet-fill fa-3x py-auto" aria-hidden="true"></i>
-                        <div class="card-body text-end">
-                            <h5 class="card-title">Rp2.000.000</h5>
-                            <p class="card-text">Profit</p>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <small class="text-start fw-bold">Total Penghasilan</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="card p-2 shadow">
-                    <div class="d-flex align-items-center px-2">
-                        <i class="bi bi-calendar-fill float-start fa-3x py-auto" aria-hidden="true"></i>
-                        <div class="card-body text-end">
-                            <h5 class="card-title">20</h5>
-                            <p class="card-text">Schedule</p>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <small class="text-start fw-bold">Panen Terjadwal</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                <div class="card p-2 shadow">
-                    <div class="d-flex align-items-center px-2">
-                        <i class="bi bi-people-fill float-start fa-3x py-auto" aria-hidden="true"></i>
-                        <div class="card-body text-end">
-                            <h5 class="card-title">30</h5>
-                            <p class="card-text">Customer</p>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <small class="text-start fw-bold">Jumlah Customer</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="page-section item mt-5 mb-5" id="item">
-        <div class="container">
-          <h2 class="text-center mb-5"><b><u>Hot Items</u></b></h2>
-          <div class="row justify-content-center" style="margin: 20px;">
-            <div class="row gx-2 gx-lg-2 row-cols-2 row-cols-md-2 row-cols-xl-2 justify-content-center">
-
-                <div class="col mb-6">
-                    <div class="card h-100">
-                        <div class="badge badge-primary text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BEST SELLER</div>
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="jamur segar" />
-                        <div class="card-body p-4" style="background-color: #A3DA8D;">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">NamaProduk</h5>
-                                Rphargaa
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col mb-6">
-                    <div class="card h-100">
-                      <div class="badge badge-primary text-black position-absolute" style="top: 0.5rem; right: 0.5rem;">HOT TOPIC</div>
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="kaldu jamur" />
-                        <div class="card-body p-4" style="background-color: #A3DA8D;">
-                            <div class="text-center">                              
-                                <h5 class="fw-bolder">Nama Workshop</h5>                               
-                                Rphargaa
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-      </section> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MitraJamur.Id</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/01ab9e1577.js" crossorigin="anonymous"></script>
+    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur222.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2008/12/17/cool-neon-green-outer-glow-pointer.html" target="_blank" title="Cool Neon Green Outer Glow Pointer"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Cool Neon Green Outer Glow Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #grid1 {
+            width: 15rem;
+            height: 5rem;
+            @apply fixed transition-all duration-1000 bg-[#519259];
+        }
+        #grid2 {
+            width: calc(100% - 15rem);
+            height: 5rem;
+            left: 15rem;
+            @apply fixed transition-all duration-1000 bg-[#519259];
+        }
+        #grid3 {
+            width: 15rem;
+            height: calc(100% - 5rem);
+            top: 5rem;
+            @apply fixed transition-all duration-1000 bg-[#519259];
+        }
+        #grid4 {
+            width: calc(100% - 15rem);
+            height: calc(100% - 5rem);
+            left: 15rem;
+            top: 5rem;
+            @apply fixed transition-all duration-1000 bg-[#d3e4cd];
+        }
+        .serif {
+            font-family: 'Roboto Slab', serif;
+        }
+        ::-webkit-scrollbar {
+            width: 1rem;
+            height: 1rem;
+        }
+        ::-webkit-scrollbar-track {     
+            background-color: #d3e4cd;
+            border-radius: 5rem;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #519259;
+            border-radius: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid1">
+        <h1 class="text-white text-2xl font-medium text-center mt-5">MitraJamur.Id</h1>
     </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
-<!-- <script>
-$(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-
-</script> -->
-</body>
-</html>
+    <div id="grid2">
+        <a href="/profil" class="text-white text-2xl float-right mr-5 mt-5"><i class="fa-regular fa-user text-black text-3xl"></i> Profil</a>
+    </div>
+    <div id="grid3">
+        <ul class="mt-5">
+            <a href="/admin/dashboard">
+                <li class="px-5 py-2 text-xl text-white"><i class="fa-solid fa-house text-black absolute left-5"></i><span class="ml-10">Home</span></li>
+            </a>
+            <a href="/admin/produk">
+                <li class="px-5 py-2 text-xl text-white"><i class="fa-solid fa-bag-shopping text-black absolute left-5"></i><span class="ml-10">Product</span></li>
+            </a>
+            <a href="/admin/workshop">
+                <li class="px-5 py-2 text-xl text-white"><i class="fa-solid fa-book-open text-black absolute left-5"></i><span class="ml-10">Workshop</span></li>
+            </a>
+            <a href="/admin/pemesanan">
+                <li class="px-5 py-2 text-xl text-white"><i class="fa-solid fa-cart-shopping text-black absolute left-5"></i><span class="ml-10">Pemesanan</span></li>
+            </a>
+            <a href="/admin/laporan">
+                <li class="px-5 py-2 text-xl text-white"><i class="fa-solid fa-file text-black absolute left-5"></i><span class="ml-10">Laporan</span></li>
+            </a>
+            <a href="/admin/jadwal_panen">
+                <li class="px-5 py-2 text-xl text-white"><i class="fa-solid fa-calendar text-black absolute left-5"></i><span class="ml-10">Jadwal Panen</span></li>
+            </a>
+            <a href="/admin/customer">
+                <li class="px-5 py-2 text-xl text-white"><i class="fa-solid fa-user text-black absolute left-5"></i><span class="ml-10">Customer</span></li>
+            </a>
+        </ul>
+        <ul class="absolute bottom-0">
+            <a href="/logout">
+                <li class="px-5 py-2 text-xl text-white"><span class="ml-10">Logout <i class="fa-solid fa-angle-right"></i></span></li>
+            </a>
+        </ul>
+    </div>
+    <div id="grid4" class="p-4">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-dollar-sign"></i><i class="fa-solid fa-dollar-sign"></i></span> Penjualan: <span class="float-right font-medium">Rp.100.000</span></div>
+            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-calendar"></i></span> Jadwal: <span class="float-right font-medium">20</span></div>
+            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-users"></i></span> Customer: <span class="float-right font-medium">30</span></div>
+        </div>
+        <div class="serif mt-10 overflow-scroll max-h-[80%]">
+            <h1 class="text-center text-2xl font-medium underline">Hot Items</h1>
+            <div class="grid grid-cols-2 gap-4 justify-items-center mt-10">
+                <div class="relative bg-[#f4f4f4] p-2 w-[15rem] text-center">
+                    <img src="{{asset('/bahan-img/1.jpg')}}" class="h-[11rem] w-full">
+                    <p class="font-bold my-2">Nugget Jamur</p>
+                    <p class="my-2">Rp. 20.000</p>
+                    <div class="absolute  rounded-lg px-2 py-1 text-white bg-[#2682ea] -top-1 -right-1">Best Seller</div>
+                </div>
+                <div class="relative bg-[#a3da8d] p-2 w-[15rem] text-center">
+                    <img src="{{asset('/bahan-img/2.jpg')}}" class="h-[11rem] w-full">
+                    <p class="font-bold my-2">Pelatihan Olah Jamur Tiram</p>
+                    <p class="my-2">Rp. 50.000</p>
+                    <div class="absolute  rounded-lg px-2 py-1 text-white bg-[#2682ea] -top-1 -right-1">Hot Topic</div>
+                </div>
+            </div>
+        </div>
+        <h1></h1>
+    </div>
 </body>
 </html>
