@@ -68,7 +68,7 @@
                 <h1>Detail Workshop</h1>
             </div>
         </div>
-        <a href="/user/workshop" class="bg-[#04936d] px-3 py-2 rounded-full text-white text-lg font-medium mt-2 ml-10"><i class="fa-solid fa-circle-left"></i> Back</a>
+        <a href="/user/workshop" class="bg-[#04936d] px-3 py-2 rounded-full text-white text-lg font-medium mt-2 ml-10"><i class="fa-solid fa-circle-left"></i> Back</a> 
         <div class="serif mt-10 overflow-scroll max-h-[80%]">
             <div class="container">
                 <div class="row">

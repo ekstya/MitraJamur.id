@@ -58,7 +58,7 @@ Route::get('/user/partisipasi', [WorkshopController::class, 'user_partisipasi'])
 Route::get('/user/partisipasi/konfirmasi/{pendaftaran_workshop_id}',[WorkshopController::class, 'user_konfirmasi_partisipasi'])->middleware('auth');
 Route::post('/user/partisipasi/konfirmasi/{pendaftaran_workshop_id}/post',[WorkshopController::class, 'user_konfirmasi_partisipasi_post'])->middleware('auth');
 
-
+ 
 
 
 

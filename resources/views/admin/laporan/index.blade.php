@@ -102,13 +102,13 @@
     <div id="grid4" class="p-4">
         <br><br><br><br>
         <div class="serif mt-10 overflow-scroll max-h-[80%]">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-10 mb-10 ">
                 <div class="pr-3 pb-3 col-span-3">
-                    <a href="/admin/laporan/pembelian" class="bg-[#05548C] px-16 py-12 rounded-lg text-white text-lg font-medium"><i class="fa-solid fa-shopping-cart"></i>Laporan Pembelian Produk</a>
+                    <a href="/admin/laporan/pembelian" class="bg-[#05548C] px-16 py-8 rounded-lg text-white text-lg font-medium"><i class="fa-solid fa-shopping-cart"></i> Laporan Pembelian Produk</a>
                 </div>
                 <br><br><br><br>
                 <div class="pr-3 pb-3 col-span-3">
-                    <a href="/admin/laporan/pendaftaran" class="bg-[#E6930B] px-10 py-10 rounded-lg text-white text-lg font-medium"><i class="fa-solid fa-file"></i>Laporan Pendaftaran Workshop</a>
+                    <a href="/admin/laporan/pendaftaran" class="bg-[#E6930B] px-10 py-8 rounded-lg text-white text-lg font-medium"><i class="fa-solid fa-file"></i> Laporan Pendaftaran Workshop</a>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MitraJamur.Id</title>
@@ -102,7 +102,10 @@
                     <img src="{{ asset('foto-produk/'.$dt->gambarProduk) }}" class="h-[11rem] w-full">
                     <p class="font-bold my-2">{{$dt->namaProduk}}</p>
                     <p class="my-2">Rp{{number_format($dt->hargaProduk)}}</p>
-                    <a href="/admin/produk/edit/{{$dt->id}}" class="border border-black px-3">Edit</a>
+                    <div class="row mb-2 mr-2">
+                        <!-- <a href="/admin/produk/detail/{{$dt->id}}" class="border border-black px-3 text-black">Detail</a> -->
+                        <a href="/admin/produk/edit/{{$dt->id}}" class="border border-black px-3">Edit</a>
+                    </div>
                 </div>
                 @endforeach
             </div>

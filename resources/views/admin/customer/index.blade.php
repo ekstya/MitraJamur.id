@@ -110,7 +110,7 @@
         <div class="container">
             <div class="row">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 justify-items-left ">
-                    <table class="table-auto w-full bg-white">
+                    <table class="table-auto w-full bg-white" style="margin-left: 45px;">
                         <thead>
                             <tr class="border-b-black border border-transparent">
                                 <th class="py-3">No</th>

@@ -32,7 +32,7 @@ class ProdukController extends Controller
             $data->save();
         }
         return redirect()->route('admin_produk');
-    }
+    } 
 
     public function admin_produk_edit($id)
     {

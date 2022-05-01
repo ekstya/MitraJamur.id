@@ -101,17 +101,17 @@
         </ul>
     </div>
     <div id="grid4" class="p-4">
-        <div class="grid grid-cols-1 gap-4 bg-[#519259] mb-4">
+        <div class="grid grid-cols-1 gap-4 bg-[#519259] mb-8">
             <div class="text-center text-xl text-white font-medium p-3">
-                <h1>Data Laporan Pendaftaran</h1>
+                <h1>Data Laporan Pendaftaran Workshop</h1>
             </div>
         </div>
-        <a href="/admin/laporan" class="bg-[#04936d] px-3 py-1 rounded-full text-white text-lg font-medium"><i class="fa-solid fa-circle-left"></i> Back</a>
+        <a href="/admin/laporan" class="bg-[#04936d] px-3 py-2 rounded-full text-white text-lg font-medium"><i class="fa-solid fa-circle-left"></i> Back</a>
         <br>
-        <div class="container">
+        <div class="container mt-10">
                     <div class="row">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 justify-items-left ">
-                            <table class="table-auto w-full bg-white">
+                            <table class="table-auto w-full bg-white" style="margin-left: 45px;">
                                 <thead>
                                     <tr class="border-b-black border border-transparent">
                                         <th class="py-3">No</th>

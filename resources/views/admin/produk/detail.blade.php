@@ -7,7 +7,7 @@
 </div>
 @endsection
 
-@section('konten')
+@section('konten') 
 <div class="col-xl-12 col-lg-7">
     <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->

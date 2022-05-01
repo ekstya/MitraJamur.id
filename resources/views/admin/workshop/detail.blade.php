@@ -100,12 +100,12 @@
         </ul>
     </div>
     <div id="grid4" class="p-4">
-        <div class="grid grid-cols-1 gap-4 bg-[#519259] mb-4">
-            <div class="text-center text-xl text-white font-medium p-3">
+        <div class="grid grid-cols-1 gap-4 mb-4 mt-3">
+            <div class="text-center text-4xl text-black font-bold p-3">
                 <h1>Detail Workshop</h1>
             </div>
         </div>
-        <a href="/admin/workshop" class="bg-[#04936d] px-3 py-1 rounded-full text-white text-lg font-medium mt-2"><i class="fa-solid fa-circle-left"></i> Back</a>
+        <a href="/admin/workshop" class="bg-[#04936d] px-3 py-2 rounded-full text-white text-lg font-medium mt-2"><i class="fa-solid fa-circle-left"></i> Back</a>
         <div class="serif mt-10 overflow-scroll max-h-[80%]">
             <div class="container">
                 <div class="row">
@@ -114,10 +114,11 @@
                             <img src="{{ asset('foto-workshop/'.$data->gambarWorkshop) }}" width="70%;" height="auto">
                         </div>
                         <div class="col-md-9" align="left">
-                            <p class="font-bold my-2" style="font-size:36px;">{{$data->namaWorkshop}}</p>
-                            <p class="font-bold my-2" style="font-size:12px;">{{$data->deskripsiWorkshop}}</p>
-                            <p class="my-2 text-center" style="font-size:28px; font-family:Comic Sans MS;">Rp{{number_format($data->hargaWorkshop)}}</p>
-                            <p class="my-2 text-center" style="font-size:24px; font-family:Comic Sans MS;">Pelaksanaan: {{$data->waktuWorkshop}}</p>
+                            <p class="font-medium my-2 text-center" style="font-size:30px;">{{$data->namaWorkshop}}</p>
+                            <p class="my-2 text-center" style="font-size:20px; font-family:Comic Sans MS;">Rp{{number_format($data->hargaWorkshop)}}</p>
+
+                            <p class="font-medium my-2 mt-6" style="font-size:15px;">{{$data->deskripsiWorkshop}}</p>
+                            <p class="my-2 text-left mt-5 font-bold" style="font-size:15px; font-family:Comic Sans MS;">Pelaksanaan: {{$data->waktuWorkshop}}</p>
                         </div>
                     </div>
                 </div>
