@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Produk;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class DetailPembelian extends Model
 {
@@ -16,4 +17,8 @@ class DetailPembelian extends Model
         'pembelian_id',
         'produk_id'
     ];
+
+    public function dataproduk(){
+        return $this->belongsTo(Produk::class,'produk_id','id');
+    }
 }

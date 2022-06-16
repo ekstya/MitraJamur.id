@@ -75,6 +75,16 @@ class WorkshopController extends Controller
         return view('admin.workshop.detail', compact('data'));
     }
 
+    public function admin_workshop_participant($id)
+    {
+        $data = PembayaranWorkshop::with(['pendaftaran','pendaftaran.user','pendaftaran.workshop'])->whereHas('pendaftaran',function ($q) use($id)
+        {
+            $q->where('workshop_id',$id);
+        })->where('statusPembayaran','Dikonfirmasi')->get();
+
+        return view('admin.workshop.participant', compact('data'));
+    }
+
     public function user_workshop()
     {
         $data = Workshop::all();
@@ -113,10 +123,9 @@ class WorkshopController extends Controller
         return view('user.partisipasi.index', compact('data'));
     }
     
-    public function user_konfirmasi_partisipasi()
+    public function user_konfirmasi_partisipasi($pendaftaran_workshop_id)
     {
-        $data = PendaftaranWorkshop::join('workshop','pendaftaran_workshop.workshop_id','=','workshop.id')->leftjoin('pembayaran_workshop','pendaftaran_workshop.id','=','pembayaran_workshop.pendaftaran_workshop_id')->select('workshop.id','workshop.namaWorkshop','workshop.waktuWorkshop','workshop.hargaWorkshop','pendaftaran_workshop.tanggalPendaftaran','pendaftaran_workshop.id','pendaftaran_workshop.user_id','pendaftaran_workshop.workshop_id','pembayaran_workshop.user_id','pembayaran_workshop.pendaftaran_workshop_id','pembayaran_workshop.statusPembayaran','workshop.gambarWorkshop')->where('pendaftaran_workshop.user_id',Auth::user()->id)->first();
-
+        $data = PendaftaranWorkshop::join('workshop','pendaftaran_workshop.workshop_id','=','workshop.id')->leftjoin('pembayaran_workshop','pendaftaran_workshop.id','=','pembayaran_workshop.pendaftaran_workshop_id')->select('workshop.id','workshop.namaWorkshop','workshop.waktuWorkshop','workshop.hargaWorkshop','pendaftaran_workshop.tanggalPendaftaran','pendaftaran_workshop.id','pendaftaran_workshop.user_id','pendaftaran_workshop.workshop_id','pembayaran_workshop.user_id','pembayaran_workshop.pendaftaran_workshop_id','pembayaran_workshop.statusPembayaran','workshop.gambarWorkshop')->where('pendaftaran_workshop.user_id',Auth::user()->id)->where('pembayaran_workshop.pendaftaran_workshop_id',$pendaftaran_workshop_id)->first();
         return view('user.partisipasi.konfirmasi', compact('data'));
     }
 

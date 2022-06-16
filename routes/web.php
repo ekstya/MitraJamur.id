@@ -80,6 +80,7 @@ Route::post('/admin/workshop/insert', [WorkshopController::class, 'admin_worksho
 Route::get('/admin/workshop/edit/{id}', [WorkshopController::class, 'admin_workshop_edit'])->name('admin_workshop_edit');
 Route::post('/admin/workshop/update/{id}', [WorkshopController::class, 'admin_workshop_update'])->name('admin_workshop_update');
 Route::get('/admin/workshop/detail/{id}', [WorkshopController::class, 'admin_workshop_detail'])->name('admin_workshop_detail');
+Route::get('/admin/workshop/participant/{id}', [WorkshopController::class, 'admin_workshop_participant'])->name('admin_workshop_participant');
 
 //admin-pemesanan
 Route::get('/admin/pemesanan', [PemesananController::class, 'admin_index'])->middleware('auth');

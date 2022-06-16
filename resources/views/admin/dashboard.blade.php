@@ -93,27 +93,50 @@
             </a>
         </ul>
     </div>
+    @if ($pembelian != null)
+    <?php
+    $penjualan = 0;
+    ?>
+    @foreach ($pembelian as $item )
+        {{ $penjualan += ($item->totalPembelian*$item->hargaProduk) }}
+    @endforeach        
+    @endif
     <div id="grid4" class="p-4">
         <div class="grid grid-cols-3 gap-4">
-            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-dollar-sign"></i><i class="fa-solid fa-dollar-sign"></i></span> Penjualan: <span class="float-right font-medium">Rp.100.000</span></div>
-            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-calendar"></i></span> Jadwal: <span class="float-right font-medium">20</span></div>
-            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-users"></i></span> Customer: <span class="float-right font-medium">30</span></div>
+            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-dollar-sign"></i><i class="fa-solid fa-dollar-sign"></i></span> Penjualan: <span class="float-right font-medium">Rp.{{number_format($penjualan, 2, ',', '.')}}</span></div>
+            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-calendar"></i></span> Jadwal: <span class="float-right font-medium">{{ $jadwal_panen }}</span></div>
+            <div class="text-xl bg-[#f5f5f5] px-3 py-2 border border-black"><span><i class="fa-solid fa-users"></i></span> Customer: <span class="float-right font-medium">{{ $customer }}</span></div>
         </div>
         <div class="serif mt-10 overflow-scroll max-h-[80%]">
             <h1 class="text-center text-2xl font-medium underline">Hot Items</h1>
             <div class="grid grid-cols-2 gap-4 justify-items-center mt-10">
+                @if ($best_seller != null)
+                    @foreach ($best_seller as $item)
+                    <div class="relative bg-[#f4f4f4] p-2 w-[15rem] text-center">
+                        <img src="{{asset("\/foto-produk\/".$item->gambarProduk)}}" class="h-[11rem] w-full">
+                        <p class="font-bold my-2">{{ $item->namaProduk}}</p>
+                        <p class="my-2">Rp.{{number_format($item->hargaProduk, 2, ',', '.')}}</p>
+                        <div class="absolute  rounded-lg px-2 py-1 text-white bg-[#2682ea] -top-1 -right-1">Best Seller</div>
+                    </div>
+                    @endforeach
+                @else 
                 <div class="relative bg-[#f4f4f4] p-2 w-[15rem] text-center">
-                    <img src="{{asset('/bahan-img/1.jpg')}}" class="h-[11rem] w-full">
-                    <p class="font-bold my-2">Nugget Jamur</p>
-                    <p class="my-2">Rp. 20.000</p>
-                    <div class="absolute  rounded-lg px-2 py-1 text-white bg-[#2682ea] -top-1 -right-1">Best Seller</div>
+                    <p class="mt-5">Belum ada produk terlaris</p>
                 </div>
-                <div class="relative bg-[#a3da8d] p-2 w-[15rem] text-center">
-                    <img src="{{asset('/bahan-img/2.jpg')}}" class="h-[11rem] w-full">
-                    <p class="font-bold my-2">Pelatihan Olah Jamur Tiram</p>
-                    <p class="my-2">Rp. 50.000</p>
-                    <div class="absolute  rounded-lg px-2 py-1 text-white bg-[#2682ea] -top-1 -right-1">Hot Topic</div>
-                </div>
+                @endif
+
+                @if ($workshop_hot_topic != null)
+                    <div class="relative bg-[#a3da8d] p-2 w-[15rem] text-center">
+                        <img src="/foto-workshop/{{$workshop_hot_topic->gambarWorkshop}}" class="h-[11rem] w-full">
+                        <p class="font-bold my-2">{{ $workshop_hot_topic->namaWorkshop }}</p>
+                        <p class="my-2">Rp.{{number_format($workshop_hot_topic->hargaWorkshop, 2, ',', '.')}}</p>
+                        <div class="absolute  rounded-lg px-2 py-1 text-white bg-[#2682ea] -top-1 -right-1">Hot Topic</div>
+                    </div>
+                @else
+                    <div class="relative bg-[#f4f4f4] p-2 w-[15rem] text-center">
+                        <p class="mt-5">Belum ada workshop terlaris</p>
+                    </div>
+                @endif
             </div>
         </div>
         <h1></h1>

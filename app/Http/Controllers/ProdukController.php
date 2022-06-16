@@ -105,6 +105,9 @@ class ProdukController extends Controller
             'produk_id' => $request->produk_id
         ]);
 
+        $produk = Produk::where('id',$request->produk_id)->first();
+        $produk->update(['stokProduk'=>$produk['stokProduk']-$request->totalPembelian]);
+
         PembayaranPembelian::create([
             'user_id' => $request->user_id,
             'pembelian_id' => $pembelianid,
@@ -116,14 +119,14 @@ class ProdukController extends Controller
 
     public function user_pemesanan()
     {
-        $data = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->select('pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk')->where('Pembelian.user_id', Auth::user()->id)->get();
+        $data = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->select('pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk','produk.hargaProduk')->where('Pembelian.user_id', Auth::user()->id)->get();
 
         return view('user.pemesanan.index', compact('data'));
     }
 
     public function user_konfirmasi_pemesanan($pembelian_id)
     {
-        $data = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->select('pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk')->where([['Pembelian.user_id', Auth::user()->id], ['pembayaran_pembelian.pembelian_id', $pembelian_id]])->first();
+        $data = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->select('pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk','produk.hargaProduk')->where([['Pembelian.user_id', Auth::user()->id], ['pembayaran_pembelian.pembelian_id', $pembelian_id]])->first();
 
         return view('user.pemesanan.konfirmasi', compact('data'));
     }

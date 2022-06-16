@@ -84,7 +84,7 @@
                             </div>
                             <div class="col-md-9" align="left">
                                 <p class="font-bold my-2 text-center mb-1" style="font-size:36px;">{{$data->namaProduk}}</p>
-                                <p class="my-2 text-center mb-2" style="font-size:25px;">Rp{{number_format($data->totalPembelian)}}</p>
+                                <p class="my-2 text-center mb-2" style="font-size:25px;">Rp.{{number_format(($data->totalPembelian*$data->hargaProduk), 2, ',', '.')}}</p>
 
                                 <p class="my-2 text-center mb-4" style="font-size:20px;">Tanggal Pembelian:{{$data->tanggalPembelian}}</p>
 

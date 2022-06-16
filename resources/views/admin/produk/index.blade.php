@@ -101,7 +101,7 @@
                 <div class="relative mb-5 bg-[#f4f4f4] p-2 w-[15rem] text-center">
                     <img src="{{ asset('foto-produk/'.$dt->gambarProduk) }}" class="h-[11rem] w-full">
                     <p class="font-bold my-2">{{$dt->namaProduk}}</p>
-                    <p class="my-2">Rp{{number_format($dt->hargaProduk)}}</p>
+                    <p class="my-2">Rp.{{number_format($dt->hargaProduk)}}</p>
                     <div class="row mb-2 mr-2">
                         <!-- <a href="/admin/produk/detail/{{$dt->id}}" class="border border-black px-3 text-black">Detail</a> -->
                         <a href="/admin/produk/edit/{{$dt->id}}" class="border border-black px-3">Edit</a>

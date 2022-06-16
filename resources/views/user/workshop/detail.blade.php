@@ -88,7 +88,10 @@
                                 <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
                                 <input type="hidden" value="{{$data->id}}" name="workshop_id">
                                 <div class="text-left mt-4">
-                                    <button type="submit" class="bg-[#04936d] px-2 py-1 rounded-lg text-white text-xl font-medium">Daftar Workshop</button>
+                                    <button type="submit" class="bg-[{{ Auth::user()->desa_id==null ? '#cbd1d4':'#04936d' }}] px-2 py-1 rounded-lg text-white text-xl font-medium" {{ Auth::user()->desa_id==null ? 'disabled':'' }}>Daftar Workshop</button>
+                                    @if (Auth::user()->desa_id==null)
+                                        <p class="font-medium my-2 mt-8" style="font-size:15px;">*Mohon lengkapi profil anda di menu profil atau tekan <a href="/profil" style="color: cadetblue">disini</a></p>
+                                    @endif
                                 </div>
                             </form>
                         </div>

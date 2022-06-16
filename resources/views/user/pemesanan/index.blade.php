@@ -84,7 +84,9 @@
                                         <th class="py-3">No</th>
                                         <th class="py-3">Produk</th>
                                         <th class="py-3">Tanggal Pembelian</th>
+                                        <th class="py-3">Jumlah</th>
                                         <th class="py-3">Harga</th>
+                                        <th class="py-3">Total</th>
                                         <th class="py-3">Status</th>
                                         <th class="py-3">Konfirmasi</th>
                                     </tr>
@@ -99,6 +101,8 @@
                                         <td class="text-center py-3">{{$dt->namaProduk}}</td>
                                         <td class="text-center py-3">{{$dt->tanggalPembelian}}</td>
                                         <td class="text-center py-3">{{$dt->totalPembelian}}</td>
+                                        <td class="text-center py-3">Rp.{{number_format($dt->hargaProduk, 2, ',', '.')}}</td>
+                                        <td class="text-center py-3">Rp.{{number_format(($dt->hargaProduk*$dt->totalPembelian), 2, ',', '.')}}</td>
                                         <td class="text-center py-3">{{$dt->statusPembayaran}}</td>
                                         <td class="text-center py-3">
                                             @if($dt->statusPembayaran == 'BelumBayar')

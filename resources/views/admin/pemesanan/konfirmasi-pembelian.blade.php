@@ -106,7 +106,7 @@
                     <h1>Detail Pembayaran</h1>
                 </div>
             </div>
-            <a href="/user/workshop" class="bg-[#04936d] px-3 py-1 rounded-full text-white text-lg font-medium mt-2"><i class="fa-solid fa-circle-left"></i> Back</a>
+            <a href="/admin/pemesanan/pembelian" class="bg-[#04936d] px-3 py-1 rounded-full text-white text-lg font-medium mt-2"><i class="fa-solid fa-circle-left"></i> Back</a>
             <div class="serif mt-10 overflow-scroll max-h-[80%]">
                 <div class="container">
                     <div class="row">
@@ -118,7 +118,7 @@
                             <div class="col-md-9" align="left">
                                 <p class="font-bold my-2" style="font-size:36px;">{{$data->namaProduk}}</p>
                                 <p class="my-2 text-center" style="font-size:28px; font-family:Comic Sans MS;">Pembeli: {{$data->namaUser}}</p>
-                                <p class="my-2 text-center" style="font-size:28px; font-family:Comic Sans MS;">Rp{{number_format($data->totalPembelian)}}</p>
+                                <p class="my-2 text-center" style="font-size:28px; font-family:Comic Sans MS;">Rp.{{number_format($data->totalPembelian*$data->hargaProduk, 2, ',', '.')}}</p>
                                 <p class="my-2 text-center" style="font-size:24px; font-family:Comic Sans MS;">Tanggal beli:{{$data->tanggalPembelian}}</p>
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-items-left ">
                                     <form action="/admin/pemesanan/pembelian/konfirmasi/{{$data->pembelian_id}}/terima/post" method="post" enctype="multipart/form-data">

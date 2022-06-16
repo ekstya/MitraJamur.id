@@ -86,17 +86,29 @@
                                 @csrf
                                 <input type="hidden" value="{{date('Y-m-d')}}" name="tanggalPembelian">
                                 <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
+                                <div class="serif grid grid-cols-4 gap-4">
+                                    <div class="pt-3">
+                                        Jumlah
+                                    </div>
+                                    <div class="pr-3 pt-2 col-span-3">
+                                        <input type="number" class="border w-full border-black rounded-lg p-1" value="1" name="totalPembelian" required>
+                                    </div>
+                                </div>
+                                
                                 <input type="hidden" value="{{$data->id}}" name="produk_id">
-                                <input type="hidden" value="{{$data->hargaProduk}}" name="totalPembelian">
+                                {{-- <input type="text" value="{{$data->hargaProduk}}" name="totalPembelian"> --}}
                                 <div class="text-left mt-4">
-                                    <button type="submit" class="bg-[#04936d] px-2 py-2 rounded-lg text-white text-xl font-medium">Buy Product</button>
+                                    <button type="submit" class="bg-[{{ Auth::user()->desa_id==null ? '#cbd1d4':'#04936d' }}] px-2 py-2 rounded-lg text-white text-xl font-medium" {{ Auth::user()->desa_id==null ? 'disabled':'' }}>Buy Product</button>
+                                    @if (Auth::user()->desa_id==null)
+                                        <p class="font-medium my-2 mt-8" style="font-size:15px;">*Mohon lengkapi profil anda di menu profil atau tekan <a href="/profil" style="color: cadetblue">disini</a></p>
+                                    @endif
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
         </div>
     </div>
 </body>

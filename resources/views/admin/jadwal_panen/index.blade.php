@@ -133,7 +133,6 @@
                                 <td class="text-center py-3">{{$dt->musim}}</td>
                                 <td class="text-center py-3">
                                     <a href="/admin/jadwal_panen/edit/{{$dt->id}}" class="bg-[#DEDA08] px-2 py-1 rounded-lg text-black text-sm font-medium">Edit</a>
-                                    <a href="/admin/jadwal_panen/delete/{{$dt->id}}" class="bg-[#BA0631] px-2 py-1 rounded-lg text-black text-sm font-medium">Delete</a>
                                 </td>
                             </tr>
                             @endforeach

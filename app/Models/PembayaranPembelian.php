@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Pembelian;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class PembayaranPembelian extends Model
 {
@@ -18,4 +19,8 @@ class PembayaranPembelian extends Model
         'pembelian_id',
         'statusPembayaran'
     ];
+
+    public function pembelian(){
+        return $this->belongsTo(Pembelian::class,'pembelian_id','id');
+    }
 }

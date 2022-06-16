@@ -120,13 +120,13 @@
                         Harga<span class="text-red-600">*</span>
                     </div>
                     <div class="pr-3 pt-2 col-span-3">
-                        <input type="number" class="border w-full border-black rounded-lg p-1" value="{{$data->hargaProduk}}" name="hargaProduk">
+                        <input type="number" class="border w-full border-black rounded-lg p-1" value="{{$data->hargaProduk}}" name="hargaProduk" required>
                     </div>
                     <div class="pl-3 pt-3">
                         Deskripsi
                     </div>
                     <div class="pr-3 pt-2 col-span-3">
-                        <textarea name="deskripsiProduk" id="" cols="2" class="border w-full border-black rounded-lg p-1">{{$data->deskripsiProduk}}</textarea>
+                        <textarea name="deskripsiProduk" id="" cols="2" class="border w-full border-black rounded-lg p-1" required>{{$data->deskripsiProduk}}</textarea>
                     </div>
                     <div class="pl-3 pt-3">
                         Stok<span class="text-red-600">*</span>

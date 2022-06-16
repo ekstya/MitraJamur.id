@@ -111,14 +111,17 @@
         <div class="container mt-10">
                     <div class="row">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 justify-items-left ">
-                            <table class="table-auto w-full bg-white" style="margin-left: 45px;">
+                            <table class="table-auto w-full bg-white">
                                 <thead>
                                     <tr class="border-b-black border border-transparent">
                                         <th class="py-3">No</th>
                                         <th class="py-3">Pembeli</th>
+                                        <th class="py-5">Alamat</th>
                                         <th class="py-3">Produk</th>
                                         <th class="py-3">Tanggal Pembelian</th>
+                                        <th class="py-3">Jumlah</th>
                                         <th class="py-3">Harga</th>
+                                        <th class="py-3">Total</th>
                                         <th class="py-3">Status</th>
                                         <th class="py-3">Konfirmasi</th>
                                     </tr>
@@ -131,9 +134,12 @@
                                     <tr class="border-b-black border border-transparent">
                                         <td class="text-center py-3">{{$no++}}</td>
                                         <td class="text-center py-3">{{$dt->namaUser}}</td>
+                                        <td class="text-center py-5">{{$dt->user->desa->namaDesa}}, {{ $dt->user->desa->kecamatan->namaKecamatan }}, {{ $dt->user->desa->kecamatan->kabupaten->namaKabupaten }}, {{ $dt->user->desa->kecamatan->kabupaten->provinsi->namaProvinsi }}</td>
                                         <td class="text-center py-3">{{$dt->namaProduk}}</td>
                                         <td class="text-center py-3">{{$dt->tanggalPembelian}}</td>
                                         <td class="text-center py-3">{{$dt->totalPembelian}}</td>
+                                        <td class="text-center py-3">Rp.{{number_format($dt->hargaProduk, 2, ',', '.')}}</td>
+                                        <td class="text-center py-3">Rp.{{number_format(($dt->hargaProduk*$dt->totalPembelian), 2, ',', '.')}}</td>
                                         <td class="text-center py-3">{{$dt->statusPembayaran}}</td>
                                         <td class="text-center py-3">
                                             @if($dt->statusPembayaran == 'MenungguKonfirmasi')

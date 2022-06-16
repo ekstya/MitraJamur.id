@@ -111,8 +111,8 @@
         <br>
         <div class="container mt-10">
                     <div class="row">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 justify-items-left ">
-                            <table class="table-auto w-full bg-white" style="margin-left: 45px;">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 ">
+                            <table class="table-auto w-full bg-white" >
                                 <thead>
                                     <tr class="border-b-black border border-transparent">
                                         <th class="py-3">No</th>
@@ -132,7 +132,7 @@
                                         <td class="text-center py-3">{{$dt->namaUser}}</td>
                                         <td class="text-center py-3">{{$dt->namaProduk}}</td>
                                         <td class="text-center py-3">{{$dt->tanggalPembelian}}</td>
-                                        <td class="text-center py-3">Rp{{number_format($dt->totalPembelian)}}</td>
+                                        <td class="text-center py-3">Rp.{{number_format(($dt->totalPembelian*$dt->hargaProduk), 2, ',', '.')}}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

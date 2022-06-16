@@ -56,12 +56,12 @@
             <h1 class="text-xl font-bold">Register</h1>
             <form action="/post_register" method="post" class="mt-5 w-[75%]">
 				@csrf
-                <input type="text" placeholder="Username" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mt-5 mb-3 w-full" name="username">
-                <input type="password" placeholder="Password" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="password">
-                <input type="email" placeholder="Email" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="email">
-                <input type="text" placeholder="Full Name" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="nama_user">
-                <input type="text" placeholder="Phone Number" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="no_hp">
-                <input type="hidden" placeholder="Role" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-4 w-full" value="user" name="role">
+                <input type="text" placeholder="Username" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mt-5 mb-3 w-full" name="username" required>
+                <input type="password" placeholder="Password" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="password" required>
+                <input type="email" placeholder="Email" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="email" required>
+                <input type="text" placeholder="Full Name" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="nama_user" required>
+                <input type="text" placeholder="Phone Number" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-3 w-full" name="no_hp" required>
+                <input type="hidden" placeholder="Role" class="bg-[#e6dbdb] px-5 py-2 rounded-lg mb-4 w-full" value="user" name="role" required>
                 <br>
                 <button class="bg-[#04936d] text-white px-4 py-2 my-4 mb-5">Register</button>
             </form>

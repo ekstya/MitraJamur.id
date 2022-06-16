@@ -100,7 +100,7 @@
                                         <td class="text-center py-3">{{$dt->namaWorkshop}}</td>
                                         <td class="text-center py-3">{{$dt->waktuWorkshop}}</td>
                                         <td class="text-center py-3">{{$dt->tanggalPendaftaran}}</td>
-                                        <td class="text-center py-3">{{$dt->hargaWorkshop}}</td>
+                                        <td class="text-center py-3">Rp.{{number_format($dt->hargaWorkshop, 2, ',', '.')}}</td>
                                         <td class="text-center py-3">{{$dt->statusPembayaran}}</td>
                                         <td class="text-center py-3">
                                             @if($dt->statusPembayaran == 'BelumBayar')

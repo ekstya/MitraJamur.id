@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Kabupaten;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Kecamatan extends Model
 {
@@ -16,4 +17,7 @@ class Kecamatan extends Model
         'kabupaten_id',
         'namaKecamatan'
     ];
+    public function kabupaten(){
+        return $this->belongsTo(Kabupaten::class,'kabupaten_id','id');
+    }
 }

@@ -103,7 +103,6 @@
                     <p class="font-bold my-2">{{$dt->namaWorkshop}}</p>
                     <p class="my-2">Rp{{number_format($dt->hargaWorkshop)}}</p>
                     <div class="row mb-2 mr-2">
-                        <a href="/admin/workshop/detail/{{$dt->id}}" class="border border-black px-3 bg-[#04936d] text-white">Detail</a>
                         <a href="/admin/workshop/edit/{{$dt->id}}" class="border border-black px-3 bg-[#04936d] text-white">Edit</a>
                     </div>
                     <a href="/admin/workshop/participant/{{$dt->id}}" class="border border-black px-3 bg-[#04936d] text-white">Participant</a>

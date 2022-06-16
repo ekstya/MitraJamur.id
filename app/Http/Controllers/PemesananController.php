@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BuktiPembelian;
-use App\Models\BuktiWorkshop;
-use App\Models\PembayaranPembelian;
-use App\Models\PembayaranWorkshop;
+use App\Models\Produk;
 use App\Models\Pembelian;
-use App\Models\PendaftaranWorkshop;
 use Illuminate\Http\Request;
+use App\Models\BuktiWorkshop;
+use App\Models\BuktiPembelian;
+use App\Models\PembayaranWorkshop;
+use App\Models\PembayaranPembelian;
+use App\Models\PendaftaranWorkshop;
+use App\Http\Controllers\Controller;
 
 class PemesananController extends Controller
 {
@@ -19,7 +21,7 @@ class PemesananController extends Controller
 
     public function index_pembelian()
     {
-        $data = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->leftjoin('user','pembelian.user_id','=','user.id')->select('user.id','pembelian.user_id','user.namaUser','pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk')->get();
+        $data = Pembelian::with(['user','user.desa.kecamatan.kabupaten.provinsi'])->join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->leftjoin('user','pembelian.user_id','=','user.id')->select('user.id','pembelian.user_id','user.namaUser','pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk','produk.hargaProduk')->get();
         return view('admin.pemesanan.pembelian', compact('data'));
     }
 
@@ -31,14 +33,16 @@ class PemesananController extends Controller
 
     public function index_pembelian_konfirmasi($pembelian_id)
     {
-        $data = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->leftjoin('user','pembelian.user_id','=','user.id')->select('user.id','pembelian.user_id','user.namaUser','pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk')->where('pembayaran_pembelian.pembelian_id',$pembelian_id)->first();
+        $data = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->leftjoin('user','pembelian.user_id','=','user.id')->select('user.id','pembelian.user_id','user.namaUser','pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk','produk.hargaProduk')->where('pembayaran_pembelian.pembelian_id',$pembelian_id)->first();
         $bukti = BuktiPembelian::where('pembayaran_pembelian_id', $pembelian_id)->first();
         return view('admin.pemesanan.konfirmasi-pembelian', compact('data','bukti'));
     }
     
     public function index_pembelian_konfirmasi_terima($pembelian_id)
     {
-        $data = PembayaranPembelian::where('pembelian_id', $pembelian_id)->update([
+        $data = PembayaranPembelian::where('pembelian_id', $pembelian_id);
+        $datas = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->leftjoin('user','pembelian.user_id','=','user.id')->select('user.id','pembelian.user_id','user.namaUser','pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk','produk.hargaProduk','produk.stokProduk')->where('pembayaran_pembelian.pembelian_id',$pembelian_id)->first();
+        $data->update([
             'statusPembayaran' => 'Dikonfirmasi'
         ]);
         return redirect('/admin/pemesanan/pembelian');
@@ -46,9 +50,13 @@ class PemesananController extends Controller
     
     public function index_pembelian_konfirmasi_tolak($pembelian_id)
     {
-        $data = PembayaranPembelian::where('pembelian_id', $pembelian_id)->update([
+        $data = PembayaranPembelian::where('pembelian_id', $pembelian_id);
+        $datas = Pembelian::join('detail_pembelian', 'pembelian.id', '=', 'detail_pembelian.pembelian_id')->leftjoin('produk', 'detail_pembelian.produk_id', '=', 'produk.id')->rightjoin('pembayaran_pembelian', 'pembelian.id', '=', 'pembayaran_pembelian.pembelian_id')->leftjoin('user','pembelian.user_id','=','user.id')->select('user.id','pembelian.user_id','user.namaUser','pembelian.id', 'detail_pembelian.id', 'detail_pembelian.pembelian_id', 'detail_pembelian.produk_id', 'pembelian.tanggalPembelian', 'pembelian.user_id', 'pembelian.totalPembelian', 'pembayaran_pembelian.id', 'pembayaran_pembelian.user_id', 'pembayaran_pembelian.pembelian_id', 'pembayaran_pembelian.statusPembayaran', 'produk.namaProduk', 'produk.id', 'produk.gambarProduk','produk.hargaProduk','produk.stokProduk')->where('pembayaran_pembelian.pembelian_id',$pembelian_id)->first();
+
+        $data->update([
             'statusPembayaran' => 'Ditolak'
         ]);
+        Produk::where('id',$datas->produk_id)->update(['stokProduk'=>$datas->stokProduk+$datas->totalPembelian]);
         return redirect('/admin/pemesanan/pembelian');
     }
 

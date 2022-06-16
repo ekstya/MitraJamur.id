@@ -18,4 +18,9 @@ class PembayaranWorkshop extends Model
         'pendaftaran_workshop_id',
         'statusPembayaran'
     ];
+
+    public function pendaftaran(){
+        return $this->belongsTo(PendaftaranWorkshop::class,'pendaftaran_workshop_id','id');
+    }
+    
 }

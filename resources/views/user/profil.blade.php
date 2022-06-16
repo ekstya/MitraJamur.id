@@ -105,6 +105,53 @@
                                     <div class="pr-3 pt-2 pb--2 col-span-3">
                                         <input type="text" class="border w-full border-black rounded-lg p-1" name="email" value="{{$data->email}}" required>
                                     </div>
+                                    <div class="pl-3 pt-3">
+                                        Desa
+                                    </div>
+                                    <div class="pr-3 pt-2 pb--2 col-span-3">
+                                        <select class="border w-full border-black rounded-lg p-1" name="desa" id="">
+                                            @if ($data->desa_id == null)
+                                                <option value="">Pilih Desa</option>
+                                            @else
+                                                @foreach ($desa as $item)
+                                                    @if ($item->id == $data->desa_id)
+                                                        <option value="{{ $item->id }}">{{ $item->namaDesa }}</option>
+                                                    @endif
+                                                @endforeach
+                                            @endif
+                                            
+                                            @foreach ($desa as $item)
+                                                @if ($item->id != $data->desa_id)
+                                                    <option value="{{ $item->id }}">{{ $item->namaDesa }}</option>
+                                                @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($data->desa_id == null)
+                                    @else
+                                        @foreach ($desa as $item)
+                                            @if ($item->id == $data->desa_id)
+                                                <div class="pl-3 pt-3">
+                                                    Kecamatan
+                                                </div>
+                                                <div class="pr-3 pt-2 col-span-3">
+                                                    <input type="text" class="border w-full border-black rounded-lg p-1" value="{{$item->namaKecamatan}}" disabled>
+                                                </div>
+                                                <div class="pl-3 pt-3">
+                                                    Kabupaten
+                                                </div>
+                                                <div class="pr-3 pt-2 col-span-3">
+                                                    <input type="text" class="border w-full border-black rounded-lg p-1" value="{{$item->namaKabupaten}}" disabled>
+                                                </div>
+                                                <div class="pl-3 pt-3">
+                                                    Provinsi
+                                                </div>
+                                                <div class="pr-3 pt-2 col-span-3">
+                                                    <input type="text" class="border w-full border-black rounded-lg p-1" value="{{$item->namaProvinsi}}" disabled>
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    @endif
                                     <div></div>
                                     <div class="pr-3 pb-3 col-span-3">
                                         <button type="submit" class="bg-[#04936d] px-2 py-1 rounded-lg text-white text-lg font-medium"><i class="fa-solid fa-paper-plane"></i> Submit</button>
